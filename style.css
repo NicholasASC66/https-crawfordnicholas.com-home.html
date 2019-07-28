@@ -1,7 +1,27 @@
-.menu-animated{
-    display: block;
+.header{
+    padding: 10px 66px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
 }
 
+
+
+.menu{
+    display: inline-block;
+    font-size: 25px;
+    align-items: flex-end;
+}
+.menu ul a {
+    text-decoration: none;
+    color: gray;
+    font-size: 20px;
+    opacity: 5;
+
+}
+.menu ul a:hover{
+    color:black;
+}
 
 .photo1{
     display: flex;
