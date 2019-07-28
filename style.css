@@ -1,6 +1,5 @@
 .menu-animated{
-    flex-direction: row
-
+    display: block;
 }
 
 
