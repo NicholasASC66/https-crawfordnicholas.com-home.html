@@ -1,6 +1,9 @@
-body{
-    background-color: black
+.background{
+    background-image: url("https://photos.google.com/u/1/share/AF1QipMqk4GPxwn-h_MDLCoGJqgTbKZl1UKsBJqUWp8qYdOErEoX8Seb7QdY3XzYBTOfuA/photo/AF1QipP8JrZ3RkbsNQTyV7jupRJRGfbCVc_ltc3yLAPV?key=RUVTMHhRV2p5QkhXeHJnVjkxV1BpdmtkRXJlUmNB")
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
 }
+
 
 .header{
     padding: 10px 75px;
