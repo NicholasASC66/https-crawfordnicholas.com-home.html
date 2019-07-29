@@ -1,5 +1,7 @@
+
+
 .header{
-    padding: 10px 66px;
+    padding: 10px 75px;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 40px;
@@ -11,6 +13,8 @@
     display: inline-block;
     font-size: 25px;
     align-items: flex-end;
+    margin-left: 425px;
+    letter-spacing: 2;
 }
 .menu ul a {
     text-decoration: none;
@@ -40,4 +44,25 @@
 #Blackbox2{
     margin-right:10px;
     margin-left: 10px;
+}
+.bio-pic{
+    margin-left: 55px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: inline-flex;
+}
+.bio{
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right:50px;
+    margin-bottom:150px;
+    text-align: justify;
+}
+
+.contacts ul a {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    display: flex
 }
