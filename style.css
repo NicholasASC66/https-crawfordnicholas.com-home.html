@@ -79,5 +79,6 @@
     font-size:50px;
     font: bold;
     display: flex;
-    float: center;
+    justify-content: center;
+    align-items: center;
 }
