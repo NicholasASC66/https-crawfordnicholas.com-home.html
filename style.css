@@ -1,3 +1,5 @@
+
+/* HOMEPAGE */
 .background{
     background-image: url("https://lh3.googleusercontent.com/iLHeIxzIvwvOzoayqExtT6Zt5Y_8ddEL-kve21ukpozLYzoWdJGcr7pJlDNkfCy7flbCP7aXlFV4YCYMP45SLiLfr4aEOCpZyrMlb2PuFcav7f9s3aI2XUyZ_tVOE5Ff3GIl877EcP-nXAG5zusKao96CT4huOBBOSt1CAvawgc-ScYYYoltwGPVrixs1fRSNVcd-FwTpYa939i8KGQY2k0EedfyyiW1951JstGuInGRjTL1M2oSsKrGNZamj8o9WZPVmOSn-Y1k0gd6JPsDYx8Rp93nnZxDWC21WBljjm_mdR_OhN0lQ9GTyOVVVhnXgAg7wu_uWdJ6TSUaTVH6bcnIb-dINn3BcTG4IPtac8cYh-NXReNPBQcne64EgBa6K1RpHnWastJGCMcNrEBxYqe3YB_u3xC6hoAIcHnkGfzQmxqXvJfRXF1ubG9WqkcqmBCYFyyIYmxEF-qD1Lgb7Cw1BnG4Rtu4aeqEYcg7JOQf4pE-xgllugyxJLyQy4mb4bUY1U9LSlhGe-69UgzyLg79yL6iwbRSE6Em18N3ir7oKCrkqMozGZgoEQYzJg-zyRnz-ZIxAmN05MFdXjOlnpHXS1shm-RlXk-7cKx2EOBoCL0qxAjzHgr4I3mDCv8iRWH6AAFo49RKu6_3xkAdnZrXcTXbs0ehNQlCHXQrgaFHz9LcFe4Wc9RJjr_RimykwXp-I-58Wr6E2a6eYIy6arYu=w1082-h768-no");
     background-color: #cccccc;
@@ -6,36 +8,66 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    opacity: 50%;
+}
+.home-link{
+    display: flex;
+    display: inline;
+    font-size: 20px;
+    opacity: 5;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+}
+.home-link:hover{
+    opacity: 1;
+    text-decoration:none;
+    color: #cccccc
+}
+.home-header{
+    font-size:50px;
+    font: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#center-name{
+    display: flex;
+    align-items: center;
+    margin: 200px 0 200px 0;
 }
 
 
+/* TOPBAR */
 .header{
     padding: 10px 75px;
     font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
     margin-top: 40px;
 }
 
-
-
-.menu{
-    display: inline-block;
-    font-size: 25px;
-    align-items: flex-end;
-    margin-left: 425px;
-    letter-spacing: 2;
-}
-.menu ul a {
-    text-decoration: none;
-    color: gray;
+.home-menul{
+    display: flex;
+    display: inline;
+    justify-content: flex-end;
     font-size: 20px;
-    opacity: 5;
-
+    text-decoration: none;
+    letter-spacing: 2;
+    flex-direction: row;
+    margin: 0 0 0px 400px;
 }
-.menu ul a:hover{
-    color:black;
+
+.home-menul:hover{
+    opacity: 1;
+    text-decoration:none;
+    color: #cccccc
+}
+.menu-spacing{
+    display: flex;
+    justify-content: space-between;
 }
 
+/* Portfolio */
 .photo1{
     display: flex;
     justify-content: center;
@@ -54,6 +86,9 @@
     margin-right:10px;
     margin-left: 10px;
 }
+
+
+/* About */
 .bio-pic{
     margin-left: 55px;
     margin-right: 5px;
@@ -70,15 +105,8 @@
     text-align: justify;
 }
 
-.contacts ul a {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-    display: flex
+
+.body{
+    font-family: 'Libre Baskerville', serif;
 }
-.home-header{
-    font-size:50px;
-    font: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
