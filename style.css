@@ -1,20 +1,21 @@
 
 /* HOMEPAGE */
 .background{
-    background-image: url("https://lh3.googleusercontent.com/iLHeIxzIvwvOzoayqExtT6Zt5Y_8ddEL-kve21ukpozLYzoWdJGcr7pJlDNkfCy7flbCP7aXlFV4YCYMP45SLiLfr4aEOCpZyrMlb2PuFcav7f9s3aI2XUyZ_tVOE5Ff3GIl877EcP-nXAG5zusKao96CT4huOBBOSt1CAvawgc-ScYYYoltwGPVrixs1fRSNVcd-FwTpYa939i8KGQY2k0EedfyyiW1951JstGuInGRjTL1M2oSsKrGNZamj8o9WZPVmOSn-Y1k0gd6JPsDYx8Rp93nnZxDWC21WBljjm_mdR_OhN0lQ9GTyOVVVhnXgAg7wu_uWdJ6TSUaTVH6bcnIb-dINn3BcTG4IPtac8cYh-NXReNPBQcne64EgBa6K1RpHnWastJGCMcNrEBxYqe3YB_u3xC6hoAIcHnkGfzQmxqXvJfRXF1ubG9WqkcqmBCYFyyIYmxEF-qD1Lgb7Cw1BnG4Rtu4aeqEYcg7JOQf4pE-xgllugyxJLyQy4mb4bUY1U9LSlhGe-69UgzyLg79yL6iwbRSE6Em18N3ir7oKCrkqMozGZgoEQYzJg-zyRnz-ZIxAmN05MFdXjOlnpHXS1shm-RlXk-7cKx2EOBoCL0qxAjzHgr4I3mDCv8iRWH6AAFo49RKu6_3xkAdnZrXcTXbs0ehNQlCHXQrgaFHz9LcFe4Wc9RJjr_RimykwXp-I-58Wr6E2a6eYIy6arYu=w1082-h768-no");
+    background-image: url("https://lh3.googleusercontent.com/T6F5i1ym1G4WqV6j6DJ6kvueqhQZmZ5AQSZ0W5Dy6gB5e9YunRDAP4fNVDZmugSwf-fBOTRXxk7r89D7TnfG6_slpYg1gXYsoku3ZENi5hhGY6_aJh4BiN-bMrnlz_14GYWbh5wQmx8kzrj7pP_3MAeaU_CzbUzkilAGF7Og8UvKXfsrzebIQrN_5hZrFE86bFE85oCagxRkAgVnncZ_fDgzuCdTdJrTBIgqFmyNa7miArDFi2tqsApTX2NNMeUlIwt0h-AuTzzZeFllu8ULcINXRh9RYdjDZpdcd5jAoZIFvBHgjjTakMajsXNVfdswciJRrBSO7SER_LDc_n_JyVNd46f2LReAo8WLx1jn4x0PuaFHWjYsX5MA-S27JkcHCjArIAFm7IoxLrP6aRRfhXyRnZqk1gaT9QPh160STpCVkkY19lm1jyihHbE6nUu9ZfEZBCOIZoEGUT3_WmLhSDgH66zaN-dzLrTBzMK-wk8K7b42Rc3NZ62RMKOhFCg6juK6V_A9kk2_a2Nc8NjJB4-1OEMFqx3FfRMfvG_amNHp7cDctgoiHap_YBEOaoLp-YGqbG03A6Q7wPDwF-OTLnu60UwIIBJjO_D5f4elAmGOL6Myn2OxOdtzTvNJr15BiRHshRl8fhm-ZP7CdTgNKNW6jnWT6jLdTy85_T8xYwKSJZIOeYblCBLBTOtSffLNXsqukQg2caSY1ZNPToyudqZvLQ=w1331-h867-no");
     background-color: #cccccc;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    opacity: 50%;
 }
 .home-link{
     font-size: 20px;
     opacity: 5;
     text-decoration: none;
-    color:black;
+    color:grey;
+    display: flex;
+    display: inline;
 }
 .home-link:hover{
     opacity: 1;
@@ -24,9 +25,8 @@
 .home-header{
     font-size:50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color:bisque
+    display: inline;
+    color:white;
 }
 
 
