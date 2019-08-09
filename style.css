@@ -11,11 +11,8 @@
     opacity: 50%;
 }
 .home-link{
-    display: flex;
-    display: inline;
     font-size: 20px;
     opacity: 5;
-    justify-content: center;
     text-decoration: none;
     color:black;
 }
@@ -26,17 +23,13 @@
 }
 .home-header{
     font-size:50px;
-    font: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    color:bisque
 }
 
-#center-name{
-    display: flex;
-    align-items: center;
-    margin: 200px 0 200px 0;
-}
+
 
 
 /* TOPBAR */
