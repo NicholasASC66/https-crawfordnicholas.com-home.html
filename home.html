@@ -1,26 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nicholas Crawford</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
-</head>
-<body class = "background">
-        <link href="https://lh3.googleusercontent.com/po5zatwGAgLaoU2jtCoP15M7gTLbyMRXxKU2KnP-UbWrf-dhRCs9si5qiHZR7mHyzlrBjHkJnU5ZqiYu4G_37JVGS1C7XHDH1_M4t-268CJdxJap6NontXKIO9NSyo4kZRGdsoBgzd6TI3rjNkCTVroj17Qakbc5pP-8IoUdQRTs-ZrpYXMQttl9Ip0dYNOYwM6KZVV39wjYF3UeCe4gfAy37Fj2s-CevlHUhDOuHU_1dn8O7VdyN28x7wfJKqyTgJF-aKVQwwGnlX2g3qNlPtT3bJtNXLJhp9zniChQKZ3QxVYxhWYC0FWVBWsuTE0Qqbc_hbEGlDNGtpxcSCNUmZLL-C3i6uP-gEbOdCmAWK_wQ6biNT7hwENnbYubQkR242Td2NvwOqnsRShZrG-8bI0ot_481T32eVaJ2zaJibLtK6sb-MtibHv_UNtKsczCiFQId2HLsS2vCYQf7BoalO3oECY86dqho__pgJGGkJcXWfmHMIbwirhGNxsxrQSbCbRAegPpQX-3a7j5dPoKZkUqH50rsdRW7HqTj8Sx-Q4e6UzUAozto6WrRDEIbFwbOFyyvePtoq8XkMy1Xllkwc6M81py81nNx1cA6v2d7oZtHH34yVD1HsfAYmw_n22XuiTMI8PY4yym2z6PQedCOx0hJ4tDPbKGmo6g--3Ms7j8vdC5Pf8FTtLK1uvPjQhmumMnF2Am2VbQst083miZnyLD=w576-h867-no" rel="stylesheet">
+    <title>Personal Website</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-    <div class = "wapper_animated_fadeInDownBig">
-        <div class = "home-header">
-                    Nicholas Crawford
-                    <a class = "home-menul" href="home.html">Home</a>
-                    <a class = "home-menul" href="index.html">Portfolio</a>
-                    <a class = "home-menul" href="Contact.html"> Contact</a>
-                    <a class = "home-menul" href="About.html"> About</a>
-        </div>
+<script>
+    function openSlideMenu(){
+        document.getElementById('menu').style.width = '250px';
+        document.getElementById('content').style.marginLeft = '250px';
+    }
+    function closeSlideMenu(){
+        document.getElementById('menu').style.width = '0px';
+        document.getElementById('content').style.marginLeft = '0px';
+    }
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                    <a href="#home">NC</a>
+                </div>
+            
+        <div id="content">
+            <span class = "slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </span>
+                <div id= "menu" class ="nav">
+                    <a href="#" class="close" onclick ="closeSlideMenu()">
+                        <i class ="fas fa-times"></i>
+                    </a>
+                        <a href="#home">Home</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#aboutme">About Me</a>
+                        <a href="#contact">Contact</a>
+                </div> 
+        </div>  
     </div>
         
+        <section id="home">
 
+            <div class="slideshow">
+                <div class="slideshow-item">
+                    <img src="55060001.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="slideshow">
+                <div class="slideshow-item">
+                    <img src="bubbles.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="slideshow">
+                <div class="slideshow-item">
+                    <img src="generations.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="slideshow">
+                <div class="slideshow-item">
+                    <img src="texture.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="slideshow">
+                <div class="slideshow-item">
+                    <img src="Disarray.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae officia exercitationem, harum deserunt facilis ex explicabo beatae quaerat ab odit aliquid magnam molestias cumque deleniti pariatur quasi, placeat soluta quis!</p>
+        </section>
+
+        <section id="aboutme">
+            <h1>About Me</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae officia exercitationem, harum deserunt facilis ex explicabo beatae quaerat ab odit aliquid magnam molestias cumque deleniti pariatur quasi, placeat soluta quis!</p>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae officia exercitationem, harum deserunt facilis ex explicabo beatae quaerat ab odit aliquid magnam molestias cumque deleniti pariatur quasi, placeat soluta quis!</p>
+                    <div>
+                        <ul class="socials">
+                            <li><a href="#"><img src="gmail.png"></a></li>
+                            <li><a href="#"><img src="instagram.png"></a></li>
+                            <li><a href="#"><img src="linkedin.png"></a></li> 
+                        </ul>
+                    </div>
+        </section>
+    </div>
 </body>
 </html>
