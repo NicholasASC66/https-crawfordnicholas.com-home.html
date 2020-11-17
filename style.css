@@ -2,25 +2,84 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 100vh;
+    background-color: black;
 }
 
+body architecture{
+background-color:#333333 ;
+}
+
+/* Home page */
 .slideshow{
     width: 100%;
-    height: 100vh;
+    height:100vh;
     position: relative;
+    overflow:hidden;
+    z-index: -1;
 }
 .slideshow-item{
     width: inherit;
     height: inherit;
     position: absolute;
-    /* opacity: 0; */
+    opacity: 0;
+    animation: cycleImages 51s infinite;
 }
 
+.slideshow-item img{
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+    animation: zoom 51s infinite;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img{
+    animation-delay:0s;
+
+}
+
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img{
+    animation-delay:10s;
+
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img{
+    animation-delay:20s;
+
+}
+
+.slideshow-item:nth-child(4),
+.slideshow-item:nth-child(4) img{
+    animation-delay:30s;
+}
+
+.slideshow-item:nth-child(5),
+.slideshow-item:nth-child(5) img{
+    animation-delay:40s;
+
+}
+
+@keyframes cycleImages{
+    25%{
+opacity: 1;
+    }
+    40%{
+opacity: 0;
+    }
+}
+
+@keyframes zoom{
+    100%{
+        transform:scale(1.3)
+    }
+}
 .container{
     width: 100%;
     height: 100%;
@@ -32,7 +91,7 @@ body{
     height:100%;
     width: 0;
     position: fixed; 
-    z-index: 1;
+    z-index: 99;
     top: 0;
     right: 0;
     background-color: #111111;
@@ -43,14 +102,13 @@ body{
 }
 .nav a {
     display: block;
-    padding: 20px 30px;
+    padding: 20px ;
     font-size: 25px;
     text-decoration:none;
     color: #ccc;
-
 }
 .nav a:hover{
-    color: #ffffff;
+    color:white;
     transition: 0.4s;
 }
 .nav .close{
@@ -63,8 +121,9 @@ body{
 
 
 .slide a{
-    color: black;
+    color: white;
     font-size: 50px;
+    z-index: 99;
 }
 
 i .fas fa-bars{
@@ -77,18 +136,24 @@ i .fas fa-bars{
     justify-content: space-between ;
     position: sticky;
     top:0;
+    width: 100%;
     padding: 20px;
     transition: margin-left 0.9s;
 }
 
 
 .logo {
-text-decoration: none;
 font-size: 50px;
 font-weight: 700;
 text-transform: uppercase;
 letter-spacing:-7px;
 animation: 1.5s infinite beatHeart;
+z-index: 99;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
 }
 
 @keyframes beatHeart{
@@ -110,44 +175,243 @@ animation: 1.5s infinite beatHeart;
 }
 
 section{
-    widows:100vh;
-    height:100vh;
     scroll-snap-align: center ;
 }
 
 section h1{
     font: size 4rem;
-
-}
-
-section p{
-    font-size: 1,5rem;
-    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    padding: 20px;
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 0;
+    color: white;
 }
 
 section#home{
+    widows:100vh;
+    height:100vh;
+}
+
+/* project pages */
+section#projects{
+    widows:100vh;
+    height:100vh;
+    background-color:#333333;
+}
+.project-pages{
+    display: flex;
+    align-content: center;
+    padding-left: 90px;
+}
+.project-pages ul li{
+    padding: 10px;
+    list-style: none;
+}
+
+.project-pages ul li a {
+    padding-top:50px;
+    font-size: 40px;
+    text-decoration:none;
+    color: #ccc;
+    font-weight: 600;
+    
+}
+.project-pages li a:hover{
+    color: white;
+    transition: 0.6s;
+}
+.slider-container{
+    margin: 0 auto;
+    position: relative;
+    width: 33.7%;
+    height:100vh;
 
 }
-section#projects{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:#8a3900;
+.slide-img{
+    Position: absolute;
+    width: 100%;
+    height:100vh;
+    overflow:hidden;
+    z-index: -3;
 }
+.slide-img img{
+    margin: auto;
+    width: auto;
+    height:100vh;
+}
+#i1, #i2, #i3, #i4, #i5{
+    display: none;
+}
+.pre, .nxt{
+    width: 12%;
+    height:100%;
+    position: absolute;
+    top:0;
+    background-color: #888888;
+    z-index: 99;
+    cursor: pointer;
+    opacity: 10%;
+}
+.pre{
+    left:0;
+
+}
+.nxt{
+    right:21px;
+}
+
+.slide-img{
+    z-index: 1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four,
+#i5:checked ~ #five{
+    z-index: 9;
+}
+/* About me Page */
 
 section#aboutme{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:#753100;
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    background-color:#292929;
 }
 
-section#contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:#612800 ;
+section p {
+    font-size: 1,5rem;
+    min-height: fit-content;
+    float: right;
+    color: white;
 }
+.aboutme-container{
+    width: 100%;
+}
+.img-banner{
+    width: 100%;
+    padding-top: 5px;
+    float: left;
+}
+.bio-wrapper{
+    width: 100%;
+    padding: 5px 5px 5px;
+    font-size: 17px;
+}
+/* contact page */
+section#contact{
+    widows:100vh;
+    height:100vh;
+    background-color:#1f1f1f;
+}
+
+.social-menu{
+display: flex;
+justify-content: center;
+}
+.social-menu ul{
+    margin: 5%;
+}
+
+.social-menu ul li{
+    list-style: none;
+    margin: 40px;
+    transition: .7s;
+}
+
+
+.fa-instagram,
+.fa-linkedin-in{
+    color: white;
+    transition: .7s;
+}
+
+.fa-inbox{
+    color: white;
+}
+
+
+
+@media only screen and (max-width:768px){
+    .nav a {
+        display: block;
+        padding: 20px ;
+        font-size: 25px;
+        text-decoration:none;
+        color: #ccc;
+    }
+    .nav a:hover{
+        color: #ffffff;
+        transition: 0.4s;
+    }
+    .nav .close{
+        position: absolute;
+        top: 0;
+        right: 22px;
+        margin-left:50px;
+        font-size: 30px;
+    }
+    
+    
+    .slide a{
+        color: white;
+        font-size: 50px;
+    }
+    
+    i .fas fa-bars{
+        float: right;
+    }
+    
+    .img-banner{
+        width: 85%;
+        padding-top: 5px;
+        padding-left: 100px;
+    }
+    .bio-wrapper{
+        width: 100%;
+        margin:0 auto;
+        padding-left: 100px;
+    }
+    .slider-container{
+        margin: 0 auto;
+        position: relative;
+        width:100%;
+    }
+    .slide-img{
+        Position: absolute;
+        width:100%;
+    }
+    .slide-img img{
+        margin: auto;
+        width: auto;
+        height:100vh;
+    }
+
+    .pre{
+        left:0;
+    
+    }
+    .nxt{
+        right:0;
+    }
+}
+
+
+
+@media screen and (min-width:1000px){
+    .img-banner{
+        width:30%;
+        padding-left: 100px;
+        padding-top: 5px;
+    }
+    .bio-wrapper{
+        width: 100%;
+        margin:0 auto;
+        padding-left: 100px;
+        float: right;
+    }
+    }
