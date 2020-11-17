@@ -1,110 +1,153 @@
 
-/* HOMEPAGE */
-.background{
-    background-image: url("https://lh3.googleusercontent.com/T6F5i1ym1G4WqV6j6DJ6kvueqhQZmZ5AQSZ0W5Dy6gB5e9YunRDAP4fNVDZmugSwf-fBOTRXxk7r89D7TnfG6_slpYg1gXYsoku3ZENi5hhGY6_aJh4BiN-bMrnlz_14GYWbh5wQmx8kzrj7pP_3MAeaU_CzbUzkilAGF7Og8UvKXfsrzebIQrN_5hZrFE86bFE85oCagxRkAgVnncZ_fDgzuCdTdJrTBIgqFmyNa7miArDFi2tqsApTX2NNMeUlIwt0h-AuTzzZeFllu8ULcINXRh9RYdjDZpdcd5jAoZIFvBHgjjTakMajsXNVfdswciJRrBSO7SER_LDc_n_JyVNd46f2LReAo8WLx1jn4x0PuaFHWjYsX5MA-S27JkcHCjArIAFm7IoxLrP6aRRfhXyRnZqk1gaT9QPh160STpCVkkY19lm1jyihHbE6nUu9ZfEZBCOIZoEGUT3_WmLhSDgH66zaN-dzLrTBzMK-wk8K7b42Rc3NZ62RMKOhFCg6juK6V_A9kk2_a2Nc8NjJB4-1OEMFqx3FfRMfvG_amNHp7cDctgoiHap_YBEOaoLp-YGqbG03A6Q7wPDwF-OTLnu60UwIIBJjO_D5f4elAmGOL6Myn2OxOdtzTvNJr15BiRHshRl8fhm-ZP7CdTgNKNW6jnWT6jLdTy85_T8xYwKSJZIOeYblCBLBTOtSffLNXsqukQg2caSY1ZNPToyudqZvLQ=w1331-h867-no");
-    background-color: #cccccc;
-    height: 667px;
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+}
+
+.slideshow{
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100vh;
     position: relative;
 }
-.home-link{
-    font-size: 20px;
-    opacity: 5;
-    text-decoration: none;
-    color:grey;
-    display: flex;
-    display: inline;
+.slideshow-item{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    /* opacity: 0; */
 }
-.home-link:hover{
-    opacity: 1;
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+.nav{
+    height:100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111111;
+    opacity: .9;
+    overflow-x:hidden;
+    padding-top: 30px;
+    transition: 0.7s;
+}
+.nav a {
+    display: block;
+    padding: 20px 30px;
+    font-size: 25px;
     text-decoration:none;
-    color: #cccccc
-}
-.home-header{
-    font-size:50px;
-    display: flex;
-    display: inline;
-    color:white;
-}
-.wapper_animated_fadeInDownBig{
-    display: flex;
-    justify-content: center;
-}
+    color: #ccc;
 
-
-
-/* TOPBAR */
-.header{
-    padding: 0;
-    font-size: 40px;
-    margin-top: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+}
+.nav a:hover{
+    color: #ffffff;
+    transition: 0.4s;
+}
+.nav .close{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    margin-left:50px;
+    font-size: 30px;
 }
 
-.home-menul{
-    display: flex;
-    display: inline;
-    font-size: 20px;
-    text-decoration: none;
-    letter-spacing: 2;
-    color: gray
-}
 
-.home-menul:hover{
-    opacity: 1;
-    text-decoration:none;
+.slide a{
     color: black;
-}
-.menu-spacing{
-    display: flex;
-    justify-content: space-between;
+    font-size: 50px;
 }
 
-/* Portfolio */
-.photo1{
+i .fas fa-bars{
+    float: right;
+}
+
+
+.navbar{
     display: flex;
+    justify-content: space-between ;
+    position: sticky;
+    top:0;
+    padding: 20px;
+    transition: margin-left 0.9s;
+}
+
+
+.logo {
+text-decoration: none;
+font-size: 50px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing:-7px;
+animation: 1.5s infinite beatHeart;
+}
+
+@keyframes beatHeart{
+    0% {
+    transform: scale(1);
+    }
+    25% {
+    transform: scale(1.1);
+    }
+    40% {
+    transform: scale(1);
+    }
+    60% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+section{
+    widows:100vh;
+    height:100vh;
+    scroll-snap-align: center ;
+}
+
+section h1{
+    font: size 4rem;
+
+}
+
+section p{
+    font-size: 1,5rem;
+    min-height: fit-content;
+}
+
+section#home{
+
+}
+section#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-#Blackbox{
-    margin-right:10px;
-    margin-bottom:10px;
-    margin-left: 10px;
+    background-color:#8a3900;
 }
 
-.photo2{
+section#aboutme{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-#Blackbox2{
-    margin-right:10px;
-    margin-left: 10px;
+    background-color:#753100;
 }
 
-
-/* About */
-.bio-pic{
-    margin-left: 55px;
-    margin-right: 5px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    display: inline-flex;
+section#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#612800 ;
 }
-.bio{
-    border: 1px solid black;
-    margin-top: 100px;
-    margin-left: 50px;
-    margin-right:50px;
-    margin-bottom:150px;
-    text-align: justify;
-}
-
-
-.body{
-    font-family: 'Libre Baskerville', serif;
-}
-
