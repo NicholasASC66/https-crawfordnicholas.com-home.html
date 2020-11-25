@@ -5,49 +5,17 @@
     <meta name="viewport" content = "width=device-width, initial-scale=1.0">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function openSlideMenu(){
-            document.getElementById('menu').style.width = '250px';
-            document.getElementById('content').style.marginLeft = '250px';
-        }
-        function closeSlideMenu(){
-            document.getElementById('menu').style.width = '0px';
-            document.getElementById('content').style.marginLeft = '0px';
-        }
-    </script>
 </head>
 <body>
-    <div class="slider-container">
-    <div class="navbar">
-        <div class="logo">
-            <a href="home.html">NC</a>
+        <div class="navbar">
+            <div class="logo">
+                <a href="home.html">NC</a>
+            </div>  
         </div>
-
-            <div id="content">
-                <span class = "slide">
-                    <a href="#" onclick="openSlideMenu()">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </span>
-
-                <div id= "menu" class ="nav">
-                    <a href="#" class="close" onclick ="closeSlideMenu()">
-                        <i class ="fas fa-times"></i>
-                        </a>
-                            <a href="home.html#projects">Projects</a>
-                            <a href="home.html#aboutme">About Me</a>
-                            <a href="home.html#contact">Contact</a>
-                </div>  
-            </div>
-    </div>
 
 <input type="radio" name = "images" id="i1" checked>
 <input type="radio" name = "images" id="i2">
 <input type="radio" name = "images" id="i3">
-
-
-
-
 
     <div class="slide-img" id="one">
         <img src="C:\Users\ASCStudent\Documents\week2\personal-website\Architecture\Coney.jpeg" >
@@ -68,6 +36,5 @@
         <label for="i2" class="pre"></label>
         <label for="i1" class="nxt"></label>
     </div>
-</div>
 </body>
 </html>
