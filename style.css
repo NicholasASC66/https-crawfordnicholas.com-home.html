@@ -1,4 +1,9 @@
 
+
+
+
+
+
 *{
     margin: 0%;
     padding: 0%;
@@ -28,7 +33,7 @@ background-color:#333333 ;
     height: inherit;
     position: absolute;
     opacity: 0;
-    animation: cycleImages 51s infinite;
+    animation: cycleImages 41s infinite;
 }
 
 .slideshow-item img{
@@ -119,7 +124,6 @@ opacity: 0;
     font-size: 30px;
 }
 
-
 .slide a{
     color: white;
     font-size: 50px;
@@ -140,7 +144,6 @@ i .fas fa-bars{
     padding: 20px;
     transition: margin-left 0.9s;
 }
-
 
 .logo {
 font-size: 50px;
@@ -202,24 +205,23 @@ section#projects{
     background-color:#333333;
 }
 .project-pages{
-    display: flex;
+    display: grid;
     align-content: center;
     padding-left: 90px;
 }
-.project-pages ul li{
+.pages{
     padding: 10px;
     list-style: none;
 }
 
-.project-pages ul li a {
-    padding-top:50px;
+.pages a {
     font-size: 40px;
     text-decoration:none;
     color: #ccc;
     font-weight: 600;
     
 }
-.project-pages li a:hover{
+.project-pages a:hover{
     color: white;
     transition: 0.6s;
 }
@@ -260,7 +262,7 @@ section#projects{
 
 }
 .nxt{
-    right:21px;
+    right:40px;
 }
 
 .slide-img{
@@ -289,19 +291,24 @@ section p {
     float: right;
     color: white;
 }
+
 .aboutme-container{
+    display: inline grid;
     width: 100%;
+    grid-template-rows: auto auto;
+    align-content: space-evenly;
+    justify-content: center;
 }
-.img-banner{
-    width: 100%;
-    padding-top: 5px;
-    float: left;
+.img-banner .portrait {
+    width:100%;
 }
+
 .bio-wrapper{
-    width: 100%;
-    padding: 5px 5px 5px;
-    font-size: 17px;
+align-self: center;
+font-size: 17px;
+text-align: center;
 }
+
 /* contact page */
 section#contact{
     widows:100vh;
@@ -310,29 +317,32 @@ section#contact{
 }
 
 .social-menu{
-display: flex;
+    display: grid;
+    height: 80vh;
+align-content: space-evenly;
 justify-content: center;
 }
-.social-menu ul{
-    margin: 5%;
-}
-
-.social-menu ul li{
-    list-style: none;
-    margin: 40px;
-    transition: .7s;
+.social{
+    justify-self: center;
 }
 
 
 .fa-instagram,
 .fa-linkedin-in{
-    color: white;
-    transition: .7s;
+    color: #ffffff;
+    
 }
 
 .fa-inbox{
-    color: white;
+    color: #ffffff;
 }
+
+
+.social .fa a:hover{
+    color: white;
+    transition: 0.6s;
+}
+
 
 
 
@@ -398,20 +408,54 @@ justify-content: center;
     .nxt{
         right:0;
     }
+
+    /* Contact page */
+    .social-menu{
+        height: 80vh;
+        display: grid;
+        align-content: space-evenly;
+        justify-content: center;
+        }
+        .social{
+            justify-self: center;
+        }
 }
 
 
 
 @media screen and (min-width:1000px){
-    .img-banner{
-        width:30%;
-        padding-left: 100px;
+    /* about me page */
+    .aboutme-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 450px auto;
+        justify-content:space-around;
+    }
+    .img-banner .portrait{
+        width: 70vh;
         padding-top: 5px;
+        padding-left: 100px;
     }
     .bio-wrapper{
-        width: 100%;
-        margin:0 auto;
-        padding-left: 100px;
-        float: right;
+    align-self: center;
+    font-size: 17px;
+    text-align: center;
     }
+/* contact page */
+    .social-menu{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-content: center;
+        justify-content:space-around ;
+        }
+        .social{
+            justify-self: center;
+        }
+        .aboutme-container{
+            display: grid;
+            width: 100%;
+            grid-template-rows: auto auto;
+        }
+        
     }
