@@ -39,7 +39,6 @@ section h1{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing:-7px;
-    animation: 1.5s infinite beatHeart;
     z-index: 99;
     }
     
