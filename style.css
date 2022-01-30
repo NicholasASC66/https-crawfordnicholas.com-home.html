@@ -1,65 +1,39 @@
+/* Entire Webpage */
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
+
+.container{
+    max-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory; 
+    overflow-x: hidden;
+}
+
 section{
-    scroll-snap-align: center ;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 100vh;
     background-color: black;
     width: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+
 }
 
 body architecture{
 background-color:#202020 ;
 }
-/* index page */
-section#home{
-    widows:100vh;
-    height:100vh;
-}
-
-
-section h1{
-    font: size 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: initial;
-    padding: 20px;
-    padding-left: 100px;
-    padding-top: 50px;
-    padding-bottom: 0;
-    color: white;
-}
-
-.logo {
-
-    font-size: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing:-7px;
-    }
-    
-    .logo a{
-        text-decoration: none;
-        color: white;
-    }
-/* Slideshow */
-.slideshow img{
-    width: 100%;
-    height:100vh;
-    position: relative;
-    overflow:hidden;
-    z-index: -1;
-}
-
 /* Navagation bar */
 
 .slide a{
@@ -228,8 +202,10 @@ div.logo{
 #nav-content li a {
   padding: 10px 5px;
   display: block;
-  text-transform: uppercase;
-  transition: color .1s;
+  text-transform: capitalize;
+  transition: color 0.6s;;
+  font-size: 40px;
+  font-weight: 600;
 }
 
 #nav-content li a:hover {
@@ -280,7 +256,7 @@ a:link {
 
 a {
   color: currentColor;
-  transition: .2s ease-in-out;
+  transition:0.6s ease-in-out;
 }
 
 h1, h2, h3, h4 {
@@ -299,17 +275,48 @@ img {
 }
 
 
+/* Home page */
+.logo {
+
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing:-7px;
+    }
+    
+    .logo a{
+        text-decoration: none;
+        color: white;
+    }
+/* home-background */
+.home-background-item img{
+    width: 100%;
+    height:100vh;
+    position: relative;
+    overflow:hidden;
+    z-index: -1;
+}
+
+
 
 /* project pages */
 section#projects{
-    widows:100vh;
-    height:100vh;
     background-color:#202020;
 }
+h1{
+    font-size:  6rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .project-pages{
-    display: grid;
-    align-content: center;
-    padding-left: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
 }
 .pages{
     padding: 10px;
@@ -318,12 +325,12 @@ section#projects{
 .pages a {
     font-size: 40px;
     text-decoration:none;
-    color: #ccc;
+    color: rgb(255, 255, 255);;
     font-weight: 600;
     
 }
 .project-pages a:hover{
-    color: white;
+    color: red;
     transition: 0.6s;
 }
 .slider-container{
@@ -427,70 +434,37 @@ section#aboutme{
     margin: 0%;
     padding: 0%;
     height: 100vh;
-    background-color:#404040;
-}
-section p {
-    font-size: 1,5rem;
-    min-height: fit-content;
-    float: right;
-    color: white;
-}
-.aboutme-container{
-    display: grid;
-    grid-template-rows: 50vh auto;
-    align-self: center;
-}
-.img-banner .portrait {
-	height: 50vh;
-	padding-left: 58px;
+    width: auto;
+    background-color:#f2f2f2;
 }
 
-.bio-wrapper{
-align-self: center;
-font-size: 17px;
-text-align: center;
-padding: auto;
+.portrait img{
+    height: 75vh;
+    width: auto;
+}
+h2{
+    font-size:  6rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media screen and (min-width:768px){
-	.aboutme-container{
-		display: grid;
-		grid-template-rows: 716px auto;
-		align-self: center;
-	}
-	.img-banner .portrait {
-		height: 70vh;
-		padding-left: 90px;
-	}
-	
-	.bio-wrapper{
-	align-self: center;
-	font-size: 17px;
-	text-align: center;
-	}
+#aboutme p{
+    width: 550px;
 }
-@media screen and (min-width:1000px){
-    /* about me page */
-    .aboutme-container{
-        display: grid;
-        width: 100%;
-        grid-template-columns: 583px auto;
-        justify-content:space-around;
-        justify-self: center;
-    }
-    .img-banner .portrait{
-        height: 70vh;
-        padding-top: 5px;
-        padding-left: 100px;
-    }
-    .bio-wrapper{
-    padding-top: 5px;
-    align-self: center;
-    font-size: 17px;
-    text-align: center;
-    }
+.main{
+    width: 1130vh;
+    max-width: 95%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
 }
-
+p{
+    font-size: 200%;
+    font-weight: 600;
+}
 /* contact page */
 section#contact{
     widows:100vh;
@@ -499,10 +473,10 @@ section#contact{
 }
 
 .social-menu{
-    display: grid;
-    height: 80vh;
-align-content: space-evenly;
-justify-content: center;
+    display:grid;
+    height: 20px;
+    align-items:space-between;
+    ;
 }
 .social{
     justify-self: center;
@@ -510,94 +484,13 @@ justify-content: center;
 
 .fa-instagram,
 .fa-linkedin-in{
-    color: #ffffff;
+    color: #000000;
     
 }
 .fa-inbox{
-    color: #ffffff;
+    color: #000000;
 }
 .social .fa a:hover{
     color: white;
     transition: 0.6s;
-}
-@media screen and (min-width:1000px){
-	/* contact page */
-		.social-menu {
-			height: 80vh;
-			display: grid;
-			grid-template-columns: auto auto auto;
-			align-content: center;
-			justify-content:space-around ;
-			}
-		.social{
-			justify-self: center;
-			}
-		} 
-
-
-
-@media only screen and (max-width:768px){
-	.nav a {
-        display: block;
-        padding: 20px;
-        font-size: 25px;
-        text-decoration:none;
-        color: #ccc;
-    }
-    .nav a:hover{
-        color: #ffffff;
-        transition: 0.4s;
-    }
-    .nav .close{
-        position: absolute;
-        top: 0;
-        right: 22px;
-        margin-left:50px;
-        font-size: 30px;
-    }
-    
-    .slide a{
-        color: white;
-        font-size: 50px;
-    }
-    
-    i .fas fa-bars{
-        float: right;
-    }
-    
-    .aboutme-container{
-        display: grid;
-        grid-template-rows: 40vh 40vh;
-        justify-items: center;
-    }
-    .img-banner .portrait {
-        height: 50vh;
-    }
-    .bio-wrapper{
-    align-self: center;
-    font-size: 17px;
-    text-align: center;
-    }
-    .slider-container{
-        margin: 0 auto;
-        position: relative;
-        width:100%;
-    }
-    .slide-img{
-        Position: absolute;
-        width:100%;
-    }
-    .slide-img img{
-        margin: auto;
-        width: auto;
-        height:100vh;
-    }
-
-    .pre{
-        left:0;
-    
-    }
-    .nxt{
-        right:0;
-	}
 }
