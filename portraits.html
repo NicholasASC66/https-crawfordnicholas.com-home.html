@@ -17,69 +17,53 @@
     </script>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html">NC</a>
-        </div>
-
-            <div id="content">
-                <span class = "slide">
-                    <a href="#" onclick="openSlideMenu()">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </span>
-
-                <div id= "menu" class ="nav">
-                    <a href="#" class="close" onclick ="closeSlideMenu()">
-                        <i class ="fas fa-times"></i>
-                        </a>
-                            <a href="index.html#projects">Projects</a>
-                            <a href="index.html#aboutme">About Me</a>
-                            <a href="index.html#contact">Contact</a>
-                </div>  
+    <div class="container">
+        <div id="content">
+                <span class = "slide"> </span>
+                    <header tabindex="0">
+                        <div class="logo">
+                            <a href="index.html#home">NC</a>
+                    </header>
+                <div id="nav-container">
+                    <div class="bg"></div>
+                    <div class="button" tabindex="0">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </div>
+                    
+                    <div id="nav-content" tabindex="0">
+                      <ul>
+                        <li> <a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#aboutme">About Me</a></li>
+                      </ul>
+                    </div>
+                  </div>  
             </div>
-    </div>
-<div class="slider-container">
-<input type="radio" name = "images" id="i1" checked>
-<input type="radio" name = "images" id="i2">
-<input type="radio" name = "images" id="i3">
-<input type="radio" name = "images" id="i4">
-<input type="radio" name = "images" id="i5">
 
-
-
-    <div class="slide-img" id="one">
-        <img loading = "lazy" src="New\Citygirl=.jpg" >
-        <label for="i5" class="pre"></label>
-        <label for="i2" class="nxt"></label>
-    </div>
-
+    <section>
+        <div class="asset-content">
+            <div class="artart">
+                <img loading = "lazy" src="New\HarlemMaden=.jpg">
+            </div>
+        </div>
+    </section>
     
-    <div class="slide-img" id="two">
-    <img loading = "lazy" src="New\Madison=.jpg">
-        <label for="i1" class="pre"></label>
-        <label for="i3" class="nxt"></label>
-    </div>
+    <section>
+        <div class="asset-content">
+            <div class="artart">
+                <img loading = "lazy" src="New\Citygirl=.jpg">
+            </div>
+        </div>
+    </section>
 
-<div class="slide-img" id="three">
-    <img loading = "lazy" src="New\Aqua=.jpg">
-        <label for="i2" class="pre"></label>
-        <label for="i4" class="nxt"></label>
-    </div>
-
-
-<div class="slide-img" id="four">
-    <img loading = "lazy" src="New\Eme=.jpg">
-        <label for="i3" class="pre"></label>
-        <label for="i5" class="nxt"></label>
-    </div>
-
-<div class="slide-img" id="five">
-    <img loading = "lazy" src="New\HarlemMaden=.jpg">
-        <label for="i4" class="pre"></label>
-        <label for="i1" class="nxt"></label>
-    </div>
+    <section>
+        <div class="asset-content">
+            <div class="artart">
+                <img loading = "lazy" src="New\Musa=.jpg">
+            </div>
+        </div>
+    </section>
 </div>
-
 </body>
 </html>
