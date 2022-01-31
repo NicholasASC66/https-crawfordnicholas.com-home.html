@@ -347,8 +347,6 @@ section .asset-content{
 }
 
 
-
-
 @media screen and (min-width:768px){
 	.slider-container{
 		margin: 0 auto;
@@ -440,13 +438,13 @@ section#contact{
 }
 
 .social-menu{
-    display:grid;
-    height: 20px;
-    align-items:space-between;
+    display:flex;
+    flex-direction: row;
     
 }
 .social{
-    justify-self: center;
+    padding: 10px;
+    font-weight: 600;
 }
 
 .fa-instagram,
@@ -458,6 +456,6 @@ section#contact{
     color: #000000;
 }
 .social .fa a:hover{
-    color: white;
+    color: red;
     transition: 0.6s;
 }
