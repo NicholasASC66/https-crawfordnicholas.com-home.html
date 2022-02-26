@@ -345,117 +345,131 @@ section .asset-content{
     height: 100vh;
     width: 31.5%;
 }
-
-
-@media screen and (min-width:768px){
-	.slider-container{
-		margin: 0 auto;
-		position: relative;
-		width: 100%;
-	}
-	.slide-img{
-		Position: absolute;
-		width: 100%;
-		height:100vh;
-		overflow:hidden;
-		z-index: -3;
-	}
-	.slide-img img{
-		margin: auto;
-		padding-left: 45px;
-		width: 100%;
-		height:auto;
-	}
-	.nxt{
-		right:0px;
-	}
-	.pre{
-		left:45px;
-	}
+/* about me  */
+section.aboutme{
+    background:#f2f2f2;
 }
-
-@media screen and (min-width:1000px){
-	.slider-container{
-		margin: 0 auto;
-		position: relative;
-		width: 33.7%;
-		height:100vh;
-	}
-	.slide-img{
-		Position: absolute;
-		width: 100%;
-		height:100vh;
-		overflow:hidden;
-		z-index: -3;
-	}
-	.slide-img img{
-		margin: auto;
-		width: auto;
-		height:100vh;
-	}
-}
-/* About Me Page */
-section#aboutme{
-    margin: 0%;
-    padding: 0%;
-    height: 100vh;
-    width: auto;
-    background-color:#f2f2f2;
-}
-
 .portrait img{
-    height: 75vh;
-    width: auto;
+    height: 100vh;
+    Width:auto;
 }
 h2{
-    font-size:  4.5rem;
-    color: rgb(0, 0, 0);
+    font-size: 2.8rem;
+    color: #A9A9A9;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#aboutme p{
-    width: 550px;
-}
-.main{
-    width: 1130vh;
-    max-width: 95%;
-    margin: 0 auto;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-}
-p{
-    font-size: 200%;
+.text-card .p{
+    text-align: center;
     font-weight: 600;
 }
-/* contact page */
-section#contact{
-    widows:100vh;
-    height:100vh;
-    background-color:#808080;
-}
-
 .social-menu{
-    display:flex;
-    flex-direction: row;
-    
+    display: flex;
+    flex-direction: column;
 }
-.social{
-    padding: 10px;
-    font-weight: 600;
+.social-menu{
+    flex-direction: row;
+    justify-items:space-around;
 }
 
-.fa-instagram,
-.fa-linkedin-in{
-    color: #000000;
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Home */
+    .home-background-item img{
+        width: auto;
+        height:auto;
+        position: relative;
+        overflow:hidden;
+        z-index: -1;
+    }
+
+    /* Project  */
+    h1{
+        font-size:  2.8rem;
+        color: #A9A9A9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* About Me  */
+    section.aboutme{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        background:#f2f2f2;
+    }
+
+    h2{
+        font-size: 2.8rem;
+        color: #A9A9A9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .portrait img{
+        height: 10%;
+        Width:80vw;
+        padding-left: 60px;
+    }
+
+    .text-card .p{
+        text-align: center;
+        font-weight: 600;
+    }
+    .social-menu{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
+    }
+    .social-menu {
+        flex-direction: row;
+        justify-items:space-around;
+    }
+    }
+
+
+/**********
+iPad 3
+**********/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Home */
+
+
+    /* Project  */
+
+
+    /* About Me  */
+
+
+    }
     
-}
-.fa-inbox{
-    color: #000000;
-}
-.social .fa a:hover{
-    color: red;
-    transition: 0.6s;
-}
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Home */
+
+
+    /* Project  */
+
+
+    /* About Me  */
+
+
+    }
+    
+    /* Desktops and laptops ----------- */
+    
+    @media only screen  and (min-width : 1224px) {
+    /* Home */
+
+
+    /* Project  */
+
+
+    /* About Me  */
+    }
