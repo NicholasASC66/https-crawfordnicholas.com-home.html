@@ -290,13 +290,15 @@ img {
     }
 /* home-background */
 .home-background-item img{
-    width: 100%;
-    height:100vh;
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
     position: relative;
     overflow:hidden;
+    height: 100vh;
     z-index: -1;
+    padding: 0;
 }
-
 
 
 /* project pages */
@@ -305,7 +307,7 @@ section#projects{
 }
 h1{
     font-size:  4.5rem;
-    color: #A9A9A9;
+    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,7 +326,7 @@ h1{
 .pages a {
     font-size: 40px;
     text-decoration:none;
-    color: rgb(255, 255, 255);;
+    color: rgb(255, 255, 255);
     font-weight: 600;
     
 }
@@ -337,139 +339,115 @@ section .asset-content{
     display: flex;
     flex-direction: column;
     align-items: center;
+  
 }
 
 .artart{
     display: flex;
     align-items: center;
+
     height: 100vh;
     width: 31.5%;
 }
 /* about me  */
 section.aboutme{
+    display:flex;
+    align-items: center;
+    justify-content:center;
     background:#f2f2f2;
 }
-.portrait img{
-    height: 100vh;
-    Width:auto;
+
+.container-aboutme{
+  width:90%;
+  max-width: width 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-h2{
-    font-size: 2.8rem;
-    color: #A9A9A9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ .left{
+   width:50%;
+   height:600px;
+   background:url(New/_DSC4735.jpg) no-repeat center / cover;
+   border-radius: 8px;
+ }
+
+ .right{
+   width:50%;
+   min-height: 400px;
+   background-color: rgba(73, 73, 73, 0.733);
+   display: flex;
+   align-items:center;
+   justify-content: center;
+   padding:30px;
+   border-radius: 8px;
+   margin-left: -150px;
+ }
+
+ .right p{
+  margin: 20px 0;
+  font-weight: 600;
+ }
+
+.right a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  padding: 20px 30px;
+  display:inline-block;
+  letter-spacing: 2px;
+  font-size: 40px;
 }
 
-.text-card .p{
-    text-align: center;
-    font-weight: 600;
+
+.right a:hover{
+color: red;
+transition: 0.6s;
 }
-.social-menu{
-    display: flex;
-    flex-direction: column;
-}
-.social-menu{
-    flex-direction: row;
-    justify-items:space-around;
-}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    /* Home */
-    .home-background-item img{
-        width: auto;
-        height:auto;
-        position: relative;
-        overflow:hidden;
-        z-index: -1;
-    }
+@media only screen and (max-width: 768px) {
+  .container-aboutme{
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+  }
+  .left {
+    width: 100%;
+    height: 400px;
+  }
+  .right {
+    width: 90%;
+    margin: 0;
+    margin-top: -100px;
+  }
 
-    /* Project  */
-    h1{
-        font-size:  2.8rem;
-        color: #A9A9A9;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* About Me  */
-    section.aboutme{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        background:#f2f2f2;
-    }
-
-    h2{
-        font-size: 2.8rem;
-        color: #A9A9A9;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .portrait img{
-        height: 10%;
-        Width:80vw;
-        padding-left: 60px;
-    }
-
-    .text-card .p{
-        text-align: center;
-        font-weight: 600;
-    }
-    .social-menu{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-
-    }
-    .social-menu {
-        flex-direction: row;
-        justify-items:space-around;
-    }
-    }
+/* Project Pages */
+section .asset-content {
+  align-items: center;
+}
+.artart{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
 
 
-/**********
-iPad 3
-**********/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-    /* Home */
 
 
-    /* Project  */
+.artart img{
+  display: flex;
+
+  height: 100vh;
+
+}
 
 
-    /* About Me  */
 
 
-    }
-    
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-    /* Home */
 
 
-    /* Project  */
-
-
-    /* About Me  */
-
-
-    }
-    
-    /* Desktops and laptops ----------- */
-    
-    @media only screen  and (min-width : 1224px) {
-    /* Home */
-
-
-    /* Project  */
-
-
-    /* About Me  */
-    }
+}
